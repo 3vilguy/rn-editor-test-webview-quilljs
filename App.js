@@ -1,10 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { WebViewQuillEditor, WebViewQuillViewer } from 'react-native-webview-quilljs'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <WebViewQuillEditor
+        ref={component => (this.webViewQuillEditor = component)}
+        // getDeltaCallback={this.getDeltaCallback}
+        contentToDisplay={"contentToDisplay"}
+      // onLoad={this.onLoadCallback}
+      />
     </View>
   );
 }
